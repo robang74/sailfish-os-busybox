@@ -501,8 +501,12 @@ rm -f %{buildroot}/bin/pidof
 
 %files symlinks-grep
 %defattr(-,root,root,-)
-/bin/{,e,f}grep
-%{_bindir}/{,e,f}grep
+/bin/grep
+/bin/egrep
+/bin/fgrep
+%{_bindir}/grep
+%{_bindir}/egrep
+%{_bindir}/fgrep
 
 %files symlinks-cpio
 %defattr(-,root,root,-)
