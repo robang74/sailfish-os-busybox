@@ -40,6 +40,7 @@ jobs:
         RELEASE: ${{ env.SFOS_RELEASE }}
       uses: robang74/github-sfos-apps-build@master
       with:
+        submodules: true
         release: ${{ env.RELEASE }}
         arch: ${{ env.ARCH }}
 
