@@ -16,6 +16,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        submodules: true
 
 #RAF: Using the cache with docker requires that you have a dockerhub account and manage it as well.
 #     But it's much more powerful. Instead of saving just a directory, you will save an the docker.
