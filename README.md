@@ -28,12 +28,16 @@ The original configs has been kept for reference.
 > overloaded by a busybox applet. It is a important feature for recovering a system but also a trick that it can confuse end-users and
 > and UI apps developrs which are not aware about this internal behaviour of the busybox.
 
-> :information_source: TODO
+> :information_source: DONE (1.36.1-git2-raf2)
 >
 > A fully features busybox would create a lot of links during the building process and there is a good chance that they will be
 > reported into the RPMs which will refuse to install because the conflicts, in the best case. This situation shall be fixed in
 > the future because it can be useful to have a static fully features busybox installed into the regular root filesystem even if
 > the system would continue to use the installed binaries: busybox with applets without links.
+>
+> Fortunately the RPM building failed and log out all the links created but not expected. Those links has been added in a single RPM
+> package named `symlinks-others` which brings within it `Provides: deprecated()` and `Conflicts: busybox` limitations that hopefully
+> will prevent anyone to install it by an accident. Unless `--force` is used by default but in such case you deserve it.
 
 ---
 
