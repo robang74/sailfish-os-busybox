@@ -1,0 +1,22 @@
+diff --git a/shell/ash.c b/shell/ash.c
+index 5f8c8ea19..27882c84e 100644
+--- a/shell/ash.c
++++ b/shell/ash.c
+@@ -9446,7 +9446,7 @@ evaltree(union node *n, int flags)
+ 	}
+ 	if (flags & EV_EXIT) {
+  exexit:
+-		raise_exception(EXEND);
++		exitshell();
+ 	}
+ 
+ 	popstackmark(&smark);
+@@ -13721,7 +13721,7 @@ exitcmd(int argc UNUSED_PARAM, char **argv)
+ // f
+ //prints "trap:f" in bash. We can call exitshell() here to achieve this.
+ //For now, keeping dash code:
+-	raise_exception(EXEXIT);
++	exitshell();
+ 	/* NOTREACHED */
+ }
+ 
