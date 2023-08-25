@@ -1,3 +1,4 @@
 [submodule "upstream"]
 	path = upstream
-	url = https://github.com/sailfishos-mirror/busybox.git
+    branch = 1_36_stable
+    url = https://github.com/mirror/busybox.git
