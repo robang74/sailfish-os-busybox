@@ -52,23 +52,23 @@ jobs:
         release: ${{ env.RELEASE }}
         arch: ${{ env.ARCH }}
 
-    - name: ARMv7 build for ${{ env.ARCH }} on ${{ env.RELEASE }}
-      env:
-        ARCH: armv7hl
-        RELEASE: ${{ env.SFOS_RELEASE }}
-      uses: robang74/github-sfos-apps-build@master
-      with:
-        release: ${{ env.RELEASE }}
-        arch: ${{ env.ARCH }}
+#   - name: ARMv7 build for ${{ env.ARCH }} on ${{ env.RELEASE }}
+#     env:
+#       ARCH: armv7hl
+#       RELEASE: ${{ env.SFOS_RELEASE }}
+#     uses: robang74/github-sfos-apps-build@master
+#     with:
+#       release: ${{ env.RELEASE }}
+#       arch: ${{ env.ARCH }}
 
-    - name: AMD86 build for ${{ env.ARCH }} on ${{ env.RELEASE }}
-      env:
-        ARCH: i486
-        RELEASE: ${{ env.SFOS_RELEASE }}
-      uses: robang74/github-sfos-apps-build@master
-      with:
-        release: ${{ env.RELEASE }}
-        arch: ${{ env.ARCH }}
+#   - name: AMD86 build for ${{ env.ARCH }} on ${{ env.RELEASE }}
+#     env:
+#       ARCH: i486
+#       RELEASE: ${{ env.SFOS_RELEASE }}
+#     uses: robang74/github-sfos-apps-build@master
+#     with:
+#       release: ${{ env.RELEASE }}
+#       arch: ${{ env.ARCH }}
 
     - name: Upload build results
       uses: actions/upload-artifact@v3
