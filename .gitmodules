@@ -1,4 +1,4 @@
 [submodule "upstream"]
 	path = upstream
-    branch = 1_36_stable
+    branch = master
     url = https://github.com/mirror/busybox.git
